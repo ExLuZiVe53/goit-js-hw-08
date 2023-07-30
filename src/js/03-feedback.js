@@ -10,7 +10,7 @@ let data = {};
 const inData = () => {
   try {
     const dataOnJSON = localStorage.getItem(FEEDBACK_FORM_STALE);
-    if (!dataJSON) {
+    if (!dataOnJSON) {
       return;
     }
     data = JSON.parse(dataOnJSON);
