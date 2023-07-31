@@ -25,12 +25,12 @@ const inData = () => {
 window.addEventListener('load', inData);
 
 function onInput(event) {
-  data[event.target.name] = event.currentTarget.trim();
+  data[event.target.name] = event.target.value.trim();
   setLocalStorage();
 }
 
 function onSubmitForm(event) {
-  event.preventDafault();
+  event.preventDefault();
   data = {};
   feedbackForm.reset();
   localStorage.removeItem(FEEDBACK_FORM_STALE);
