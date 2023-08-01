@@ -14,8 +14,8 @@ const inData = () => {
       return;
     }
     data = JSON.parse(dataOnJSON);
-    Object.entries(data).forEach(([key, val]) => {
-      feedbackForm.elements[key].value = val;
+    Object.entries(data).forEach(([key, value]) => {
+      feedbackForm.elements[key].value = value;
     });
   } catch (err) {
     console.log(err.message);
@@ -33,7 +33,7 @@ function onSubmitForm(event) {
   event.preventDefault();
   data = {};
   feedbackForm.reset();
-  localStorage.removeItem(FEEDBACK_FORM_STALE);
+  localStorage.removeItem('FEEDBACK_FORM_STALE');
 }
 
 function setLocalStorage() {
