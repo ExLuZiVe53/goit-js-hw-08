@@ -13,7 +13,7 @@ setTimePlayer(currentTime);
 
 function getCurrentTime(data) {
   currentTime = data.seconds;
-  localStorage.setItem('CURRENT_TIME', JSON.stringify(data.seconds));
+  localStorage.setItem(CURRENT_TIME, JSON.stringify(data.seconds));
 }
 
 function setTimePlayer(time) {
