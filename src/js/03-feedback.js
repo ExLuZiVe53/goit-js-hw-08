@@ -31,7 +31,6 @@ function onInput(event) {
 
 function onSubmitForm(event) {
   event.preventDefault();
-  data = {};
   console.log(data);
   feedbackForm.reset();
   localStorage.removeItem(FEEDBACK_FORM_STALE);
